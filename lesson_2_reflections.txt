@@ -9,7 +9,7 @@ The working directory is the files that are in the git repository whether tracke
 been commited or not.
 
 The staging area allows you to add untracked files, and changes from the working directory to tracked files that get 
-commited to the git repository to form version controll file history.
+commited to the git repository to form version controled file history.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
@@ -20,10 +20,22 @@ will slowly expose the working directory into a series of logical commits that s
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+A branch can be used to test a new feature.  This will allow the branch to be tested 
+and discarded if need be without affecting the history.  If you keep the branch
+the changes and commit messages can be merged into master so meaningul commits shoudl 
+still engaged
+
 How do the diagrams help you visualize the branch structure?
+
+Diagrams help understand the branch structure to showing at which commit the branches 
+diverge and the commit hashses and head of each commit.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+When two branches are merged the contain of the commits and changes in those commits together in one line which can be presented as two lines converging into one
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+Automatic merging is always good because it tells you that there were no conflicting changes and then does the merge.  The only con is that if you did not diff the branches before 
+the commit then you may not be as wise to the changes that were actually made and in which files they occured even though they did not conflict.  ie... without automatic merging
+one would have to review all code changes in all cases thus being more aware of the changes that are made however this is still an options it just has to be done with diffs 
